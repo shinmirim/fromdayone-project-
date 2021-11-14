@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<!--    <link rel= "stylesheet" type="text/css" href="{% static 'css/ver1_result.css' %}">-->
+
+    <meta charset="UTF-8">
+    <title>프롬데이원 추천결과</title>
+    <style>
+        img {
+        display: block; margin: 0px auto;
+        max-width:10%; max-height:10%;
+        }
+        h1 { text-align: center; color: rgb(231, 207, 154);}
+        h2 { text-align: center; }
+        h3 { text-align: center; }
+    </style>
+</head>
+<body>
+<div style="background-color:#dfabe9;">
+    <h1>검색결과 입니다.</h1>
+</div>
+<table class="table">
+{% for tmp in result %}
+    <tr>
+    {% for item in tmp %}
+    <td>{{item}}</td>
+    <!-- <div style="background-color:#0d47a1;">
+        <h1>첫 번째 추천 상품은 {{ tmp }} 입니다.</h1>
+    </div>
+    <img src="static/img/{{ result.0 }}.jfif" alt="사진은 수집중입니다😢">
+
+    <h2>추천 상품 카테고리 </h2>
+    <h3>{{ tmp.1 }}<h3>
+    <h2>추천 상품 스타일</h2>
+    <h3>{{ tmp.2 }}</h3>
+    <div id='myDiv'></div> -->
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+<!-- <div style="background-color:#0d47a1;">
+    <h1>두 번째 추천 맥주는 {{ result.1 }} 입니다.</h1>
+</div>
+<img src="static/img/{{ result.1 }}.jfif" alt="사진은 수집중입니다😢">
+
+<h2>추천 맥주 유형 </h2>
+<h3>{{ category.1 }}<h3>
+<h2>어울리는 요리</h2>
+<h3>{{ food.1 }}</h3>
+<div id='myDiv2'></div>
+
+<div id='line2'></div>
+
+<div style="background-color:#0d47a1;">
+    <h1>세 번째 추천 맥주는 {{ result.2 }} 입니다.</h1>
+</div>
+<img src="static/img/{{ result.2 }}.jfif" alt="사진은 수집중입니다😢">
+<h2>추천 맥주 유형 </h2>
+<h3>{{ category.2 }}<h3>
+<h2>어울리는 요리</h2>
+<h3>{{ food.2 }}</h3>
+<div id='myDiv3'></div>
+
+<div id='line3'></div> -->
+</body>
+</html>

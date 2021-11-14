@@ -1,0 +1,16 @@
+<!-- templates/search_results.html -->
+<h1>Search Results</h1>
+
+
+<div>
+  <h1>검색결과 : </h1>
+
+</div>
+
+<ul>
+  {% for fashion in object_list %}
+    <li>
+      {{ fashion.name }}, {{ fashion.state }}
+    </li>
+  {% endfor %}
+</ul>
